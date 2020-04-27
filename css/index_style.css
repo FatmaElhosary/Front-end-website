@@ -1,0 +1,233 @@
+* {
+  margin: 0;
+  box-sizing: border-box;
+  padding: 0;
+}
+/* color  */
+.spa-color {
+  color: #e65f78;
+}
+body {
+  font-family: Nunito, sans-serif;
+}
+#home {
+  background-image: url("../images/header-bg.jpg");
+  background-size: 100% 100%;
+  color: #fff;
+  height: 100vh;
+  background-position: center;
+  text-align: center;
+}
+#home .overlay {
+  background-color: rgba(0, 0, 0, 0.7);
+  width: 100%;
+  height: 100%;
+}
+#home .overlay .caption {
+  height: 100%;
+}
+#home .overlay .caption h1 {
+  font-size: 50px;
+  font-weight: 700;
+  padding-bottom: 15px;
+}
+#home .overlay .caption p {
+  width: 35%;
+  font-size: 16px;
+  color: rgba(255, 255, 255, 0.6);
+  padding-bottom: 10px;
+}
+#home .overlay .caption .cv {
+  border: 2px solid #fff;
+  padding: 16px 30px;
+  border-radius: 30px;
+  text-decoration: none;
+  color: #fff;
+  font-size: 18px;
+  text-transform: uppercase;
+  transition: all 0.2s;
+}
+#home .overlay .caption .cv:hover {
+  background-color: #fff;
+  color: black;
+}
+nav {
+  width: 100%;
+}
+.navbar-light .navbar-nav .nav-link {
+  color: rgb(255, 255, 255) !important;
+}
+.navbar-light .navbar-nav .active > .nav-link {
+  color: #e65f78 !important;
+}
+.navbar-light .navbar-nav .nav-link:hover {
+  color: #e65f78 !important;
+}
+.navbar-light .navbar-brand {
+  color: rgb(255, 255, 255) !important;
+}
+.navbar .container .logo {
+  font-family: Nunito, sans-serif;
+  font-size: 30px;
+  font-weight: bold;
+  line-height: 30px;
+}
+.navbar-light .navbar-brand:hover {
+  color: rgb(255, 255, 255) !important;
+}
+.navbar .navbar-collapse ul li a {
+  font-size: 15px;
+  margin: 0 7px;
+  font-weight: 500;
+  transition: all 0.5s;
+  letter-spacing: 0.05em;
+}
+#home .color-setting {
+  background-color: rgb(255, 255, 255);
+  width: 189px;
+  height: 100px;
+  position: fixed;
+  top: 17%;
+  padding: 10px 5px;
+  opacity: 0;
+}
+#home .color-setting .color-palet .color1 {
+  background-color: E65F78;
+  width: 10px;
+  height: 10px;
+}
+#home .home-setting {
+  background-color: #2b2424;
+  background-attachment: scroll;
+  width: 40px;
+  height: 41;
+  position: absolute;
+  top: 100px;
+  padding: 4px;
+  display: block;
+  border-top-right-radius: 0.25rem !important;
+  border-bottom-right-radius: 0.25rem !important;
+}
+.home-setting .setting-icon {
+  font-size: 24px;
+  text-align: center;
+  color: rgb(255, 255, 255);
+  padding: 3px;
+  cursor: pointer;
+}
+#home .scroll-down {
+  padding: 23px 13px;
+  border: 2px solid #fff;
+  border-radius: 20px;
+  position: absolute;
+  bottom: 5vh;
+  animation: scroll 1.5s infinite;
+}
+#home .scroll-down:after {
+  content: "";
+  position: absolute;
+  width: 3px;
+  height: 15px;
+  background-color: #fff;
+  left: 12px;
+}
+@keyframes scroll {
+  0% {
+    bottom: 50px;
+  }
+  20% {
+    bottom: 50px;
+  }
+  40% {
+    bottom: 30px;
+  }
+  60% {
+    bottom: 35px;
+  }
+  80% {
+    bottom: 30px;
+  }
+  90% {
+    bottom: 35px;
+  }
+  100% {
+    bottom: 50px;
+  }
+}
+
+#about p {
+  padding-top: 0.1rem;
+  font-size: 15px;
+  font-weight: 400;
+  color: rgb(108, 117, 125);
+}
+#about .about-social-ico a {
+  color: #000;
+  line-height: 20px;
+  margin-right: 10px;
+  font-size: 20px;
+  width: 42px;
+  height: 42px;
+  border-radius: 50%;
+  border: 2px solid #d4d4d4;
+  text-align: center;
+  padding: 10px 10px;
+  display: inline-block;
+  cursor: pointer;
+  transition: all 0.5s;
+}
+#about .about-social-ico a:hover {
+  color: #e65f78;
+  border: 2px solid #e65f78;
+}
+
+#services {
+  background-color: #f8f9fa;
+}
+#services .services-top p {
+  font-size: 16px;
+  color: #6c757d;
+  padding-bottom: 5rem;
+}
+#services .spa-service {
+  font-weight: 700;
+}
+#services .service-box {
+  color: rgb(108, 117, 125);
+  font-size: 14px;
+  font-weight: 400;
+}
+#services .service-box h5 {
+  font-weight: 600;
+  color: #000;
+}
+#services .service-box i{
+  color: #e65f78;
+}
+#services .service-box .line{
+  width: 35px;
+  height: 3px;
+  background-color: #e65f78;
+  margin: 10px auto;
+}
+/*   media Query      */
+@media (max-width: 996px) {
+  nav,
+  .navbar-light {
+    background-color: #fff;
+  }
+  .navbar-light .navbar-nav .nav-link {
+    color: black !important;
+  }
+
+  .navbar-light .navbar-brand,
+  .navbar-light .navbar-brand:hover {
+    color: black !important ;
+  }
+  #home .overlay .caption h1 {
+    font-size: 30px;
+  }
+  #home .overlay .caption p {
+    width: 100%;
+  }
+}
