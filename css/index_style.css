@@ -53,10 +53,18 @@ body {
 }
 nav {
   width: 100%;
+  z-index: 10;
+}
+nav.black{
+background-color: rgb(255, 255, 255) !important;
+padding: 10px 50px;
+height: 80px;
+
 }
 .navbar-light .navbar-nav .nav-link {
   color: rgb(255, 255, 255) !important;
 }
+
 .navbar-light .navbar-nav .active > .nav-link {
   color: #e65f78 !important;
 }
@@ -71,6 +79,10 @@ nav {
   font-size: 30px;
   font-weight: bold;
   line-height: 30px;
+}
+.black .navbar-nav .nav-link , .black .navbar-brand {
+  color: black !important;
+  
 }
 .navbar-light .navbar-brand:hover {
   color: rgb(255, 255, 255) !important;
