@@ -11,14 +11,32 @@
 
 }; */
 
-$(window).on("scroll", function () {
+/* $(window).on("scroll", function () {
   if ($(window).scrollTop()) {
     $("nav").addClass("black");
   } else {
     $("nav").removeClass("black");
   }
-});
+}); */
+var aboutoffset=$('#about').offset().top;
+var navHeight=$("nav").outerHeight(true);
+$(window).scroll(function(){
+  if ($(window).scrollTop()>navHeight) {
+    $("nav").addClass("black");
+  } else {
+    $("nav").removeClass("black");
+  }
+  if($(window).scrollTop()>aboutoffset){
+    $('.mybtn').fadeIn(1000);
+
+  }else{
+    $('.mybtn').fadeOut(1000);
+
+  }
+})
+
 //JQuery
+
 $(".home-setting").click(function () {
 var boxColorWidth=$(".color-palet").outerWidth();//width+border+padding of color-palet
 var boxLeft=$('.color-setting').css("left"); //settinig left of .color-setting 
