@@ -1,23 +1,11 @@
-/* window.onscroll = function() {
-    if (document.body.scrollTop > 50 || document.documentElement.scrollTop >50)
-    {
-        document.querySelector("nav").style.backgroundColor="white";
-        this.document.querySelector(".navbar-light .navbar-nav .nav-link ").style.color="black  !important";
+//loading screen
+$(document).ready(function () {
+  $("#loading").fadeOut(2000,function(){
+    $('body').css("overflow","auto");
+  });
+ 
+});
 
-    }else{
-
-    }
-      
-
-}; */
-
-/* $(window).on("scroll", function () {
-  if ($(window).scrollTop()) {
-    $("nav").addClass("black");
-  } else {
-    $("nav").removeClass("black");
-  }
-}); */
 var aboutoffset = $("#about").offset().top;
 var navHeight = $("nav").outerHeight(true);
 $(window).scroll(function () {
@@ -28,7 +16,6 @@ $(window).scroll(function () {
   }
   if ($(window).scrollTop() > aboutoffset) {
     $(".mybtn").fadeIn(1000);
-    
   } else {
     $(".mybtn").fadeOut(1000);
   }
@@ -44,10 +31,11 @@ $(".nav-link").click(function () {
   let sectionID = $(this).attr("href");
   let sectionPlace = $(sectionID).offset().top;
   $("html , body").animate({ scrollTop: sectionPlace - navHeight }, 1000);
- 
+  $(this).parent().addClass("active"); //color nav link text when click it
+  $(".nav-item").not($(this).parent()).removeClass("active");
 });
 /////////
-//JQuery
+//JQuery Theme color
 var boxColorWidth = $(".color-palet").outerWidth(); //width+border+padding of color-palet
 $(".color-setting").animate({ left: `-${boxColorWidth}` }, 1000);
 $(".home-setting").click(function () {

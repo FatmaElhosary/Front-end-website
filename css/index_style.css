@@ -26,6 +26,7 @@ display: none;
 .mybtn i{color: white;}
 body {
   font-family: Nunito, sans-serif;
+  overflow: hidden;
 }
 h2,
 h3,
@@ -72,6 +73,10 @@ h4 {
   -moz-transition: all 0.2s;
   -ms-transition: all 0.2s;
   -o-transition: all 0.2s;
+  -webkit-border-radius: 30px;
+  -moz-border-radius: 30px;
+  -ms-border-radius: 30px;
+  -o-border-radius: 30px;
 }
 #home .overlay .caption .cv:hover {
   background-color: #fff;
@@ -108,6 +113,7 @@ nav {
 .navbar-light .navbar-brand {
   color: rgb(255, 255, 255) !important;
 }
+
 .navbar .container .logo {
   font-family: Nunito, sans-serif;
   font-size: 30px;
@@ -118,9 +124,7 @@ nav {
 .black .navbar-brand {
   color: black !important;
 }
-.navbar-light .navbar-brand:hover {
-  color: rgb(255, 255, 255) !important;
-}
+
 .navbar .navbar-collapse ul li a {
   font-size: 15px;
   margin: 0 7px;
@@ -188,6 +192,16 @@ nav {
   display: block;
   border-top-right-radius: 0.25rem !important;
   border-bottom-right-radius: 0.25rem !important;
+}
+#loading{
+  position: fixed;
+  top:0;
+  bottom: 0;
+  right:0;
+  left: 0;
+  background-color: orange;
+  z-index: 30000;
+ 
 }
 .home-setting .setting-icon {
   font-size: 24px;
@@ -342,5 +356,34 @@ nav {
   }
   #home .overlay .caption p {
     width: 100%;
+  }
+}
+/*spinner*/
+.spinner {
+  width: 40px;
+  height: 40px;
+  background-color: #333;
+
+  margin: 25% auto;
+  -webkit-animation: sk-rotateplane 1.2s infinite ease-in-out;
+  animation: sk-rotateplane 1.2s infinite ease-in-out;
+}
+
+@-webkit-keyframes sk-rotateplane {
+  0% { -webkit-transform: perspective(120px) }
+  50% { -webkit-transform: perspective(120px) rotateY(180deg) }
+  100% { -webkit-transform: perspective(120px) rotateY(180deg)  rotateX(180deg) }
+}
+
+@keyframes sk-rotateplane {
+  0% { 
+    transform: perspective(120px) rotateX(0deg) rotateY(0deg);
+    -webkit-transform: perspective(120px) rotateX(0deg) rotateY(0deg) 
+  } 50% { 
+    transform: perspective(120px) rotateX(-180.1deg) rotateY(0deg);
+    -webkit-transform: perspective(120px) rotateX(-180.1deg) rotateY(0deg) 
+  } 100% { 
+    transform: perspective(120px) rotateX(-180deg) rotateY(-179.9deg);
+    -webkit-transform: perspective(120px) rotateX(-180deg) rotateY(-179.9deg);
   }
 }
