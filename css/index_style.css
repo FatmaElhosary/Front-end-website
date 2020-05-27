@@ -8,7 +8,7 @@
   padding: 0;
 }
 /* color  */
-.spa-color {
+.spa-color,#client i{
   color: var(--theme-color);
 }
 .mybtn{
@@ -201,7 +201,6 @@ nav {
   left: 0;
   background-color: orange;
   z-index: 30000;
- 
 }
 .home-setting .setting-icon {
   font-size: 24px;
@@ -286,8 +285,7 @@ nav {
   border: 2px solid var(--theme-color);
 }
 
-#services,
-#hire-me {
+#services,#client {
   background-color: #f8f9fa;
 }
 #services .services-top p {
@@ -387,3 +385,27 @@ nav {
     -webkit-transform: perspective(120px) rotateX(-180deg) rotateY(-179.9deg);
   }
 }
+/*////////////////////*/
+#client span{
+  font-weight: 700;
+  font-size: 32px;
+  margin-bottom: 3rem;
+}
+.carousel-indicators .custom  {
+  background-color: var(--theme-color);
+  width:14px;
+  height: 5px;
+  border-radius: 20px;
+  transition: width .5s;
+  -webkit-transition:;
+  -moz-transition:;
+  -ms-transition:;
+  -o-transition:;
+  -webkit-border-radius: 20px;
+  -moz-border-radius: 20px;
+  -ms-border-radius: 20px;
+  -o-border-radius: 20px;
+}
+.carousel-indicators .active{
+  width: 20px;
+} 

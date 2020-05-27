@@ -1,11 +1,13 @@
 //loading screen
 $(document).ready(function () {
-  $("#loading").fadeOut(2000,function(){
-    $('body').css("overflow","auto");
+  $("#loading").fadeOut(2000, function () {
+    $("body").css("overflow", "auto");
   });
- 
 });
-
+$('.carousel').carousel({
+  interval: 2000,
+  
+})
 var aboutoffset = $("#about").offset().top;
 var navHeight = $("nav").outerHeight(true);
 $(window).scroll(function () {
